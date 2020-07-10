@@ -14,9 +14,8 @@
 
 <script>
 import Todo from "@/components/Todo.vue";
-const faunadb = require("faunadb");
-const client = new faunadb.Client({ secret: process.env.VUE_APP_FAUNA_SECRET });
-const q = faunadb.query;
+import {q,client} from "../init-db";
+
 export default {
   name: "Home",
   components: {
